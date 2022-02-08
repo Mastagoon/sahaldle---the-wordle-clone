@@ -35,6 +35,7 @@ body {
 }
 
 .cell {
+    transition: transform 250ms ease-in-out;
     text-transform: uppercase;
     border: .05em solid #3A3A3C;
     font-size: 2em;
@@ -50,17 +51,17 @@ body {
     border-color: hsl(200, 1%, 34%);
 }
 
-.cell.wrong {
+.wrong {
     border: none;
     background-color: #3A3A3C;
 }
 
-.cell.wrong-location {
+.wrong-location {
     border: none;
     background-color: #B59F3B;
 }
 
-.cell.correct {
+.correct {
     border: none;
     background-color: #538D4E;
 }
@@ -120,5 +121,34 @@ body {
     }
     100% {
         transform: translateX(0);
+    }
+}
+
+.cell.flip {
+    transform: rotateX(90deg)
+}
+
+.dance {
+    animation: dance .5s;
+}
+
+@keyframes dance {
+    10% {
+        transform: translateY(-50%)
+    }
+    30% {
+        transform: translateY(5%);
+    }
+    50% {
+        transform: translateY(-25%);
+    }
+    70% {
+        transform: translateY(2.5%);
+    }
+    90% {
+        transform: translateY(-5%);
+    }
+    100% {
+        transform: translateY(0);
     }
 }

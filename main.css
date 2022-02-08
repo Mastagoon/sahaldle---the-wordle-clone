@@ -67,9 +67,10 @@ body {
 }
 
 .custom-grid {
-    grid-template-columns: repeat(5, 4em) !important;
+    grid-template-columns: repeat(5, 3.5em) !important;
     /* background: red; */
-    grid-template-rows: repeat(6, 4em) !important;
+    grid-template-rows: repeat(6, 3.5em) !important;
+    margin-top: 5px;
 }
 
 .alerts {
